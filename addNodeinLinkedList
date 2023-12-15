@@ -1,0 +1,34 @@
+public class LinkedList {
+
+    Node head;
+    Node tail;
+    public void addNode(int val)
+    {
+        if(tail==null)
+        {tail=new Node(val);
+        head=tail;
+        return;
+        }
+//add new node to tail
+        Node new1 = new Node(val);
+        tail.next=new1;
+        tail=new1;
+        //add new node ar start
+//        Node newNode = new Node(val);
+//        newNode.next = head;
+//        head = newNode;
+
+        System.out.println("added "+val);
+//        print();
+    }
+
+    public void print()
+    {
+        Node current = head;
+        while(current !=null)
+        {
+            System.out.print(current.val+" ");
+            current=current.next;
+        }
+    }
+}
